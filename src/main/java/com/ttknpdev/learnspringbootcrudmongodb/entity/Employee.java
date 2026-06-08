@@ -3,13 +3,11 @@ package com.ttknpdev.learnspringbootcrudmongodb.entity;
 import jakarta.validation.constraints.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-// ** warning!! collection is not collation
-// any validation annotations it will work after you mark @Validate with @RequestBody ??
-@Document(collection = "employees") // this is way it will be mapped to a Document in the MongoDB database.
+
+@Document(collection = "employees") // Note!! collection is not collation , this is way it will be mapped to a Document in the MongoDB database.
 public class Employee {
-    @Id
-    // it will map _id on collection auto
-    // again it is not auto increment
+    // Any validation annotations it will work after you mark @Validate with @RequestBody ??
+    @Id // it will map _id on collection auto  again it is not auto increment
     private Long id;
     @NotBlank
     @NotNull
@@ -23,8 +21,8 @@ public class Employee {
     @Max(250000)
     @NotNull
     private Float salary;
-    @Pattern(regexp = "female|male") // no space
-    @NotBlank
+    @Pattern(regexp = "female|male")
+    @NotBlank // no space
     @NotNull
     private String gender;
 

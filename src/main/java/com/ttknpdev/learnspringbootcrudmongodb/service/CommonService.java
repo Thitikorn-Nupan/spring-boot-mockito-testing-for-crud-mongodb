@@ -2,7 +2,7 @@ package com.ttknpdev.learnspringbootcrudmongodb.service;
 
 import java.util.List;
 
-public interface LayerService <T> {
+public interface CommonService<T> {
     List<T> reads();
     Boolean create(T obj);
     Boolean delete(Long id);

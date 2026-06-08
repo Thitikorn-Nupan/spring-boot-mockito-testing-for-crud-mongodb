@@ -8,5 +8,4 @@ public class LogBack {
     public LogBack(Class<?> c) {
         this.log = LoggerFactory.getLogger(c);
     }
-
 }

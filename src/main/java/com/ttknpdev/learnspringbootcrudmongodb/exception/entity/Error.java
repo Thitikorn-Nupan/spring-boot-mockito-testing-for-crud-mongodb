@@ -1,8 +1,10 @@
 package com.ttknpdev.learnspringbootcrudmongodb.exception.entity;
 
 import java.util.Date;
-// for responsive use, the error (my exception) message user can see
+
+/** for responsive use, the error (my exception) message user can see */
 public class Error {
+
     private Date timestamp;
     private String message;
     private String details;

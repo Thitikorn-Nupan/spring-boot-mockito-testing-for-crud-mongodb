@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
     <!-- Setting up log path and log file name -->
     <!--<property name="LOG_PATH" value="B:/sp-log/" />
     <property name="LOG_FILE_NAME" value="one-to-many-h2" />-->
@@ -10,8 +9,6 @@
                                 (color follow the level)       (yellow)
          2023-10-28 09:15:57,510        INFO            [http-nio-8080-exec-1] : Completed initialization in 2 ms
     -->
-
-
     <appender name="ConsoleOutput"
               class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -20,8 +17,6 @@
             </Pattern>
         </layout>
     </appender>
-
-
     <!-- Setting the filename and logging pattern for log file -->
     <!--<appender name="LogFile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -44,16 +39,12 @@
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>-->
-
-
     <!-- Logging at INFO level -->
     <root level="info">
         <appender-ref ref="ConsoleOutput" />
     </root>
-
     <!-- Logging at TRACE level -->
     <logger name="com.log" level="trace" additivity="false">
         <appender-ref ref="ConsoleOutput" />
     </logger>
-
 </configuration>
